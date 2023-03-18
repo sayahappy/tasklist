@@ -53,6 +53,8 @@ public class IndexServlet extends HttpServlet {
         em.close();
 
         request.setAttribute("messages", messages);
+        request.setAttribute("messages_count", messages_count);     // 全件数
+        request.setAttribute("page", page);                         // ページ数
 
         // フラッシュメッセージがセッションスコープにセットされていたら
         // リクエストスコープに保存する（セッションスコープからは削除）
